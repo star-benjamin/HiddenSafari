@@ -24,10 +24,10 @@ function App() {
   const location=useLocation();
 
   useEffect(()=>{
-    setshowPara(location.pathname==='/Home')
+    setshowPara(location.pathname==='/')
   },[location.pathname]);
 
-  const headerBgClass = location.pathname !== '/Home' ? " bg-orange-600" : "";
+  const headerBgClass = location.pathname !== '/' ? " bg-orange-600" : "";
   
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
           ])}
         >
           <Routes>
-            <Route path="/Home"element={<LandingPage />} />
+            <Route path="/"element={<LandingPage />} />
             <Route path="/Register"element={<RegisterPage/>} />
             <Route path="/About" element={<AboutPage/>}/>
             <Route path="/Privacy" element={<Privacy />}/>

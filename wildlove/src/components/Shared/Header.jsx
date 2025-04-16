@@ -32,7 +32,7 @@ function Header({className}){
             {!isAuthenticated?(
                     <>
                     <div className="flex">
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Home"><Icon img={HomeIcon}/>Home</Link></li>
+                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/"><Icon img={HomeIcon}/>Home</Link></li>
                         <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Events"><Icon img={EventIcon}/>Events</Link></li>
                         <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Teams"><Icon img={TeamsIcon}/>Team</Link></li>
                         <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/About"><Icon img={AboutIcon}/>About</Link></li>
