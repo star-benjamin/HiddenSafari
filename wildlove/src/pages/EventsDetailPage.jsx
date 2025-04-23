@@ -25,11 +25,13 @@ function EventDetailPage() {
   },[sectionId]);
 
   if (loading) {
-    return <p className="p-4 text-gray-500">Loading section...</p>;
+    return console.log('Loading section')
+    
   }
 
   if (!section) {
-    return <div className="text-red-500 p-4">Section not found.</div>;
+    return console.log('section not found')
+    
   }
   
   return (

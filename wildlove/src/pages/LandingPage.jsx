@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { CONSTANTS } from '../Utils/constant.js';
 import { sectionData as initialSections } from '../Data/SectionData.jsx'; 
 import { useNavigate } from 'react-router-dom';
+//import FlyingBirds from '../components/LandingPage/FlyingBirds.jsx';
+import '../assets/fonts/fontstyles.css';
 
 function LandingPage() {
   const [allEvents, setAllEvents] = useState({});
@@ -73,18 +75,18 @@ function LandingPage() {
 
   return (
     <>
-      {error && <div className="text-red-500 p-4">{error}</div>}
+      {/* {error && <div className="text-red-500 p-4">{error}</div>} */}
 
-      <div className="text-5xl mt-60 m-4 text-white pl-4">
-        <h1 className='pb-1'>Experience</h1>
-        <h1>Nature</h1>
+      <div className="text-5xl mt-20 m-4 text-white pl-4">
+        <h1 className='pb-1' style={{ fontFamily: 'TheCrocodile-DY01d' }}>Experience</h1>
+        <h1 style={{ fontFamily: 'TheCrocodile-DY01d' }}>Nature</h1>
       </div>
 
       <div className="m-4 mt-18 pl-4 text-2xl">
         <h1 className="text-white font-bold">India's Largest Trekking Organisation</h1>
       </div>
 
-      <div className="m-4 flex flex-row pl-4">
+      <div className="m-2 flex flex-row pl-4">
         <Starts img="src/assets/Icons/hiking.png" value="211,500+" valueName="Participants" />
         <Starts img="src/assets/Icons/TeamsIcon.png" value="2750+" valueName="Volunteers" />
         <Starts img="src/assets/Icons/tent.png" value="68+" valueName="Events" />

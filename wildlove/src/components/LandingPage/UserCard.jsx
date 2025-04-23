@@ -1,10 +1,10 @@
 
 function UserCard(props){
     return(
-        <div className="border-gray-400 border-1 flex flex-row bg-red-100 h-[80px] w-[400px]">
+        <div className="border-gray-400  flex flex-row bg-none h-[100px] w-[450px]">
            
             <div className="m-2">
-                <img src={props.img} alt="Employee Profile picture" className="w-[50px] m-4 h-[50px] rounded-full"/>
+                <img src={props.img} alt="Employee Profile picture" className="w-[70px] m-4 h-[70px] rounded-full"/>
             </div>
             
             <div className="justify-items-start p-5 pl-1">

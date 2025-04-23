@@ -27,13 +27,13 @@ function TeamsPage() {
   }, []);
 
   return (
-    <div className="mt-15">
+    <div className="mt-0">
       <BelowHeader
         Header="Our Team"
         Paragraph="Meet the heroes behind our Success."
       />
 
-      {error && <p className="text-center text-red-500">{error}</p>}
+   
 
       {loading ? (
         <div className="flex justify-center items-center h-[300px]">

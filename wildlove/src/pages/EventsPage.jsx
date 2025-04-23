@@ -83,7 +83,7 @@ function EventsPage() {
 
   return (
     <>
-      <div className="flex flex-col mt-10 lg:flex-row justify-between items-start lg:items-center p-4 bg-orange-600">
+      <div className="flex flex-col mt-0 lg:flex-row justify-between items-start lg:items-center p-4 bg-orange-600">
         <div>
           <h1 className="text-white font-bold text-2xl">Events</h1>
           <p className="text-white py-2">Life is either a daring adventure or nothing</p>

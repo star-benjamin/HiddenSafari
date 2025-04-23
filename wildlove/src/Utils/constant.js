@@ -1,4 +1,4 @@
 
 export const CONSTANTS={
-    API_URL: "http://54.210.95.246:3005",
+    API_URL: "https://sample-project-api.chordifyed.com",
 };

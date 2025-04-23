@@ -26,7 +26,7 @@ function AboutPage() {
 
     return (
         <>
-            <div className="mt-15">
+            <div className="mt-0">
                 <BelowHeader Header="About Us" Paragraph="Who we are and where do we stand" />
             </div>
 

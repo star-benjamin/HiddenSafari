@@ -40,7 +40,7 @@ function ContactPage() {
 
   return (
     <>
-    <div className="mt-15">
+    <div className="mt-0">
         <BelowHeader Header='Contact' Paragraph='Life is either a daring adventure or nothing'/>
     </div>
     <div className="min-h-[70vh] m-15 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4 py-6">

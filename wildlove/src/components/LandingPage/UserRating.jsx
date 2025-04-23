@@ -1,14 +1,11 @@
 
-function UserRating({coment}){
+function UserRating({coment,rating}){
 
     return(
         <>
             <div className='flex flex-col'>
             <div className='flex flex-row space-x-0.5'>
-                <img src="src/assets/star.png"/>
-                <img src="src/assets/star.png"/>
-                <img src="src/assets/star.png"/>
-                <img src="src/assets/star.png"/>
+                <p className="text-2xl">{rating}</p>
                 <img src="src/assets/star.png"/>
             </div>
            

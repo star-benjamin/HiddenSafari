@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyCoolFont';
+    src: url('./TheCrocodile-DY01d.ttf') format('truetype');
+    /* src: url('./BunnyHoliday.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+  

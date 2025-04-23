@@ -4,7 +4,7 @@
 function TCS(){
     return(
         <>
-        <div>
+        <div className="mt-0">
             <BelowHeader Header='Terms and Conditions' Paragraph='Meet the heroes behind our Success.'/>
         </div>
         <div className="p-4 min-h-[50vh]">
