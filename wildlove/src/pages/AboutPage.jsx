@@ -32,17 +32,24 @@ function AboutPage() {
 
             <div className="px-6 py-8 max-w-4xl mx-auto">
                 {loading ? (
-                     <div className="flex justify-center items-center h-[300px]">
+                    <div className="flex justify-center items-center h-[300px]">
                         <DataLoading className="animate-spin text-4xl text-orange-600" />
                     </div>
                 ) : error ? (
                     <p className="text-red-500 text-center">{error}</p>
                 ) : (
-                    about?.content.split("\n\n").map((section, index) => (
-                        <p key={index} className="mb-4 text-lg leading-relaxed text-gray-700">
-                            {section}
-                        </p>
-                    ))
+                    about?.content.split("\n\n").map((section, index) => {
+                        const match = section.match(/^([^\n]+)\n([\s\S]*)$/);
+                        const heading = match ? match[1] : "";
+                        const body = match ? match[2] : section;
+
+                        return (
+                            <div key={index} className="mb-6">
+                                <h2 className="text-orange-600 text-xl font-semibold mb-2 uppercase">{heading}</h2>
+                                <p className="text-gray-700 text-lg leading-relaxed">{body}</p>
+                            </div>
+                        );
+                    })
                 )}
             </div>
         </>

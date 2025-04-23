@@ -1,64 +1,77 @@
 import HomeIcon from '/assets/Icons/HomeIcon.png'
 import EventIcon from '/assets/Icons/EventIcon.png'
 import ContactIcon from '/assets/Icons/ContactIcon.png'
-import AboutIcon  from '/assets/Icons/AboutIcon.png'
+import AboutIcon from '/assets/Icons/AboutIcon.png'
 import TeamsIcon from '/assets/Icons/TeamsIcon.png'
 import Icon from '../LandingPage/Icon.jsx'
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from './Authentication.jsx'
+import { Menu, X } from 'lucide-react'; 
 
+function Header({ className }) {
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
+  const [word, setword] = useState('');
+  const [isOpen, setIsOpen] = useState(false); 
 
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
-function Header({className}){
-    const { isAuthenticated, logout } = useAuth();
-    
-    const navigate = useNavigate();
+  useEffect(() => {
+    setword('HiddenSafari');
+  }, []);
 
-    const handleLogout = () => {
-        logout();  
-        navigate("/Home");  
-    };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    const[word,setword]=useState('')
-    useEffect(()=>{
-        setword('HiddenSafari')
-        },[])
-    return(
-       
-        <div className={`${className} sticky top-0 z-50 `}>
-            <ul className="flex flex-col lg:flex-row justify-between w-1/4">
-            <li className="p-2 m-2 text-white text-2xl pr-[540px]">{word}</li>
-            {!isAuthenticated?(
-                    <>
-                    <div className="flex">
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/"><Icon img={HomeIcon}/>Home</Link></li>
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Events"><Icon img={EventIcon}/>Events</Link></li>
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Teams"><Icon img={TeamsIcon}/>Team</Link></li>
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/About"><Icon img={AboutIcon}/>About</Link></li>
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Contact"><Icon img={ContactIcon}/>Contact</Link></li>
-                        <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Login"><Icon img={ContactIcon}/>Login</Link></li>
-                        {/*<li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Register"><Icon img={ContactIcon}/>Register</Link></li>*/}
-                    </div>
-                    </>
-                ):(
-                    <>
-                        <div className="flex ">
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Home"><Icon img={HomeIcon}/>Home</Link></li>
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Events"><Icon img={EventIcon}/>Events</Link></li>
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Profile"><Icon img={AboutIcon}/>Profile</Link></li>
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Teams"><Icon img={TeamsIcon}/>Team</Link></li>
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/About"><Icon img={AboutIcon}/>About</Link></li>
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5 hover:underline" to="/Contact"><Icon img={ContactIcon}/>Contact</Link></li> 
-                            <li className="p-1 m-2 text-white "><Link className="flex  space-x-0.5" to="/About"><Icon img={AboutIcon}/><button onClick={handleLogout} className="text-white hover:underline">Logout</button></Link></li>
-                        </div>
-                    </>
-                )}
-                
-                
-                
-            </ul>
+  const renderLinks = () => (
+    <>
+      <li><Link to="/"><Icon img={HomeIcon}/>Home</Link></li>
+      <li><Link to="/Events"><Icon img={EventIcon}/>Events</Link></li>
+      {isAuthenticated ? (
+        <>
+          <li><Link to="/Profile"><Icon img={AboutIcon}/>Profile</Link></li>
+        </>
+      ) : null}
+      <li><Link to="/Teams"><Icon img={TeamsIcon}/>Team</Link></li>
+      <li><Link to="/About"><Icon img={AboutIcon}/>About</Link></li>
+      <li><Link to="/Contact"><Icon img={ContactIcon}/>Contact</Link></li>
+      {!isAuthenticated ? (
+        <li><Link to="/Login"><Icon img={ContactIcon}/>Login</Link></li>
+      ) : (
+        <li>
+          <button onClick={handleLogout} className="flex items-center">
+            <Icon img={AboutIcon}/>Logout
+          </button>
+        </li>
+      )}
+    </>
+  );
+
+  return (
+    <div className={`${className} sticky top-0 z-50 `}>
+      <div className="flex justify-between items-center px-4 py-3">
+        <div className="text-white text-2xl">{word}</div>
+        <div className="lg:hidden">
+          <button onClick={toggleMenu}>
+            {isOpen ? <X className="text-white w-6 h-6" /> : <Menu className="text-white w-6 h-6" />}
+          </button>
         </div>
-    );
+        <ul className="hidden lg:flex space-x-6 text-white text-lg items-center">
+          {renderLinks()}
+        </ul>
+      </div>
+
+     
+      {isOpen && (
+        <ul className="lg:hidden flex flex-col bg-orange-600 text-white text-lg space-y-4 p-4">
+          {renderLinks()}
+        </ul>
+      )}
+    </div>
+  );
 }
-export default Header
+
+export default Header;
