@@ -28,7 +28,7 @@ function Header({className}){
        
         <div className={`${className} sticky top-0 z-50 `}>
             <ul className="flex flex-col lg:flex-row justify-between w-1/4">
-            <li className="p-2 m-2 text-white text-2xl pr-[580px]">{word}</li>
+            <li className="p-2 m-2 text-white text-2xl pr-[540px]">{word}</li>
             {!isAuthenticated?(
                     <>
                     <div className="flex">
