@@ -1,8 +1,8 @@
-import Icon1 from '../assets/Icons/bus_icon.png'
-import Icon2 from '../assets/Icons/cutlery.png'
-import Icon3 from '../assets/Icons/recreation.png'
-import Icon4 from '../assets/Icons/person.png'
-import Icon5 from '../assets/Icons/medic.png'
+import Icon1 from '/assets/Icons/bus_icon.png'
+import Icon2 from '/assets/Icons/cutlery.png'
+import Icon3 from '/assets/Icons/recreation.png'
+import Icon4 from '/assets/Icons/person.png'
+import Icon5 from '/assets/Icons/medic.png'
 
 
 
@@ -14,25 +14,25 @@ export const sectionData=[
         paragraph: 'Recommended camps by our Instructors',
         banners:[
             {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Kilimanjaro',
                 logo: [Icon1,Icon2,Icon3,Icon4,Icon5],
                 extraText: '',
               },
               {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Everest',
                 logo: [Icon1,Icon2,Icon3,Icon4,Icon5],
                 extraText: '',
               },
               {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Kilimanjaro',
                   logo: [Icon1,Icon2,Icon3,Icon4,Icon5],
                   extraText: '',
               },
                 {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Everest',
                   logo: [Icon1,Icon2,Icon3,Icon4,Icon5],
                   extraText: '',
@@ -56,25 +56,25 @@ export const sectionData=[
         paragraph: 'Experience the magic of winter landscapes with our guided snow treks',
         banners:[
             {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Kilimanjaro',
                 logo: [],
                 extraText: 'Extra text for Kilimanjaro',
               },
               {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Everest',
                 logo: [],
                 extraText: 'Extra text for Everest',
               },
               {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Kilimanjaro',
                   logo: [],
                   extraText: 'Extra text for Kilimanjaro',
               },
                 {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Everest',
                   logo: [],
                   extraText: 'Extra text for Everest',
@@ -95,25 +95,25 @@ export const sectionData=[
         paragraph: 'Join our exciting range of summer activities',
         banners:[
             {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Kilimanjaro',
                 logo: [],
                 extraText: 'Extra text for Kilimanjaro',
               },
               {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Everest',
                 logo: [],
                 extraText: 'Extra text for Everest',
               },
               {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Kilimanjaro',
                   logo: [],
                   extraText: 'Extra text for Kilimanjaro',
               },
                 {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Everest',
                   logo: [],
                   extraText: 'Extra text for Everest',
@@ -135,25 +135,25 @@ export const sectionData=[
         paragraph: 'Push your limits with our most thrilling outdoor challenges',
         banners:[
             {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Kilimanjaro',
                 logo: [],
                 extraText: 'Extra text for Kilimanjaro',
               },
               {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Everest',
                 logo: [],
                 extraText: 'Extra text for Everest',
               },
               {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Kilimanjaro',
                   logo: [],
                   extraText: 'Extra text for Kilimanjaro',
               },
                 {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Everest',
                   logo: [],
                   extraText: 'Extra text for Everest',
@@ -175,25 +175,25 @@ export const sectionData=[
         paragraph: 'Join us for unique, limited-time gatherings that celebrate remarkable occasions',
         banners:[
             {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Kilimanjaro',
                 logo: [],
                 extraText: 'Extra text for Kilimanjaro',
               },
               {
-                backgroundImage: 'src/assets/safari.jpg',
+                backgroundImage: '/assets/safari.jpg',
                 title: 'Everest',
                 logo: [],
                 extraText: 'Extra text for Everest',
               },
               {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Kilimanjaro',
                   logo: [],
                   extraText: 'Extra text for Kilimanjaro',
               },
                 {
-                  backgroundImage: 'src/assets/safari.jpg',
+                  backgroundImage: '/assets/safari.jpg',
                   title: 'Everest',
                   logo: [],
                   extraText: 'Extra text for Everest',

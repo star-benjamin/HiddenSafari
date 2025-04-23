@@ -68,7 +68,7 @@ function Review({ Title, para }) {
                 onClick={ScrollUp}
               >
                 <img
-                  src="src/assets/UpArrow.png"
+                  src="/assets/UpArrow.png"
                   alt="Scroll up arrow"
                   className="w-[30px] h-[30px]"
                 />
@@ -99,7 +99,7 @@ function Review({ Title, para }) {
                 onClick={ScrollDown}
               >
                 <img
-                  src="src/assets/DownArrow.png"
+                  src="/assets/DownArrow.png"
                   alt="Scroll down arrow"
                   className="w-[30px] h-[30px]"
                 />

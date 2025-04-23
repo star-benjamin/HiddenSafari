@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import DataLoading from "../components/Shared/DataLoadingIcon";
-import search from '../assets/search.png';
+import search from '/assets/search.png';
 import { CONSTANTS } from '../Utils/constant.js';
 import { useNavigate } from 'react-router-dom';
 

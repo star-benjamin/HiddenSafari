@@ -27,17 +27,17 @@ function App() {
   const location = useLocation();
 
   const landingImages = [
-    "/src/assets/waterfall.jpg",
-    "/src/assets/safari.jpg",
-    "/src/assets/bird.jpg",
-    "/src/assets/zipline.jpg"
+    "/assets/waterfall.jpg",
+    "/assets/safari.jpg",
+    "/assets/bird.jpg",
+    "/assets/zipline.jpg"
   ];
 
   const eventImages = [
-    "/src/assets/elephants.jpg",
-    "/src/assets/rhino.jpg",
-    "/src/assets/festival.jpg",
-    "/src/assets/mountain.jpg"
+    "/assets/elephants.jpg",
+    "/assets/rhino.jpg",
+    "/assets/festival.jpg",
+    "/assets/mountain.jpg"
   ];
 
   useEffect(() => {

@@ -26,10 +26,10 @@ function Footer() {
 
      
           <div className="flex flex-wrap justify-center gap-4">
-            <img src="src/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 md:w-8 md:h-8" />
-            <img src="src/assets/facebook.png" alt="Facebook" className="w-6 h-6 md:w-8 md:h-8" />
-            <img src="src/assets/threads.png" alt="Threads" className="w-6 h-6 md:w-8 md:h-8" />
-            <img src="src/assets/youtube.png" alt="YouTube" className="w-6 h-6 md:w-8 md:h-8" />
+            <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 md:w-8 md:h-8" />
+            <img src="/assets/facebook.png" alt="Facebook" className="w-6 h-6 md:w-8 md:h-8" />
+            <img src="/assets/threads.png" alt="Threads" className="w-6 h-6 md:w-8 md:h-8" />
+            <img src="/assets/youtube.png" alt="YouTube" className="w-6 h-6 md:w-8 md:h-8" />
         </div>
 
         </div>

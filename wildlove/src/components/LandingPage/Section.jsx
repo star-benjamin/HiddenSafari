@@ -26,12 +26,12 @@ function Section({title, paragraph, banners }) {
   return (
     <>
     <div className="p-8 relative">
-      {/* Title */}
+     
       <div>
         <h1 className="font-bold text-amber-800">{title}</h1>
       </div>
 
-      {/* Paragraph */}
+      
       <div>
         <p>{paragraph}</p>
       </div>
@@ -40,7 +40,7 @@ function Section({title, paragraph, banners }) {
       {/* Banner Section */}
       <div className=''>
           <button className='absolute top-1/2 left-0 transform -translate-y-1/2 ' onClick={ScrollLeft}>
-              <img src='src/assets/LeftArrow.png' alt="left navigation arrow" className='w-[50px] h-[50px]'/>
+              <img src='/assets/LeftArrow.png' alt="left navigation arrow" className='w-[50px] h-[50px]'/>
           </button>
       </div>
       
@@ -59,7 +59,7 @@ function Section({title, paragraph, banners }) {
               
             ></iframe>
           ) : (
-            // Render Banner component for image banners
+           
             <Banner
               key={index}
               backgroundImage={banner.backgroundImage}
@@ -73,7 +73,7 @@ function Section({title, paragraph, banners }) {
       </div>
       <div>
         <button className='absolute top-1/2 right-0 transform -translate-y-1/2 ' onClick={ScrollRight}>
-            <img src='src/assets/RightArrow.png' alt="right navigation arrow" className='w-[40px] h-[40px]'/>
+            <img src='/assets/RightArrow.png' alt="right navigation arrow" className='w-[40px] h-[40px]'/>
         </button>
       </div> 
     </div>

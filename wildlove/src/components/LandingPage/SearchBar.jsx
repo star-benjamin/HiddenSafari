@@ -1,4 +1,4 @@
-import search from '../../assets/search.png'
+import search from '/assets/search.png'
 
 function SearchBar(){
     return(

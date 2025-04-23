@@ -1,8 +1,8 @@
-import HomeIcon from '../../assets/Icons/HomeIcon.png'
-import EventIcon from '../../assets/Icons/EventIcon.png'
-import ContactIcon from '../../assets/Icons/ContactIcon.png'
-import AboutIcon  from '../../assets/Icons/AboutIcon.png'
-import TeamsIcon from '../../assets/Icons/TeamsIcon.png'
+import HomeIcon from '/assets/Icons/HomeIcon.png'
+import EventIcon from '/assets/Icons/EventIcon.png'
+import ContactIcon from '/assets/Icons/ContactIcon.png'
+import AboutIcon  from '/assets/Icons/AboutIcon.png'
+import TeamsIcon from '/assets/Icons/TeamsIcon.png'
 import Icon from '../LandingPage/Icon.jsx'
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom'

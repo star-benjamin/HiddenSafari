@@ -7,7 +7,7 @@ import { CONSTANTS } from '../Utils/constant.js';
 import { sectionData as initialSections } from '../Data/SectionData.jsx'; 
 import { useNavigate } from 'react-router-dom';
 //import FlyingBirds from '../components/LandingPage/FlyingBirds.jsx';
-import '../assets/fonts/fontstyles.css';
+//import '/assets/fonts/fontstyles.css';
 
 function LandingPage() {
   const [allEvents, setAllEvents] = useState({});
@@ -87,10 +87,10 @@ function LandingPage() {
       </div>
 
       <div className="m-2 flex flex-row pl-4">
-        <Starts img="src/assets/Icons/hiking.png" value="211,500+" valueName="Participants" />
-        <Starts img="src/assets/Icons/TeamsIcon.png" value="2750+" valueName="Volunteers" />
-        <Starts img="src/assets/Icons/tent.png" value="68+" valueName="Events" />
-        <Starts img="src/assets/Icons/time.png" value="11" valueName="Years" />
+        <Starts img="/assets/Icons/hiking.png" value="211,500+" valueName="Participants" />
+        <Starts img="/assets/Icons/TeamsIcon.png" value="2750+" valueName="Volunteers" />
+        <Starts img="/assets/Icons/tent.png" value="68+" valueName="Events" />
+        <Starts img="/assets/Icons/time.png" value="11" valueName="Years" />
       </div>
 
       <div className="flex flex-col">
