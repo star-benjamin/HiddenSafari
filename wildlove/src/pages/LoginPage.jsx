@@ -26,7 +26,7 @@ function LoginPage() {
     };
 
     return (
-        <div className="min-h-[80vh] justify-center pl-[400px] pt-15">
+        <div className="min-h-[80vh] pl-[80px] pt-15 justify-center md:pl-[150px] lg:pl-[400px] ">
            <div className="border-1 shadow-2xl flex flex-col  items-center w-[400px] rounded-lg p-[10px] m-2">
             <h1 className="text-2xl text-black text-center m-4">Login</h1>
                
