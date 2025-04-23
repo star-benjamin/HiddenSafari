@@ -39,7 +39,7 @@ function Section({title, paragraph, banners }) {
       
       {/* Banner Section */}
       <div className=''>
-          <button className='absolute top-1/2 left-0 transform -translate-y-1/2 ' onClick={ScrollLeft}>
+          <button className='absolute top-1/2 left-0 transform -translate-y-1/2 ' onClick={(e)=>{e.stopPropagation(); ScrollLeft();}}>
               <img src='/assets/LeftArrow.png' alt="left navigation arrow" className='w-[50px] h-[50px]'/>
           </button>
       </div>
@@ -65,14 +65,14 @@ function Section({title, paragraph, banners }) {
               backgroundImage={banner.backgroundImage}
               title={banner.title}
               logos={banner.logo}
-              extraText={banner.extraText}
+              extraText={banner.title}
               highlighted={isHighlightedEvents}
             />
           )
         )}     
       </div>
       <div>
-        <button className='absolute top-1/2 right-0 transform -translate-y-1/2 ' onClick={ScrollRight}>
+        <button className='absolute top-1/2 right-0 transform -translate-y-1/2 ' onClick={(e)=>{ e.stopPropagation(); ScrollRight();}}>
             <img src='/assets/RightArrow.png' alt="right navigation arrow" className='w-[40px] h-[40px]'/>
         </button>
       </div> 

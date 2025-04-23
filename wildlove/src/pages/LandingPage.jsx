@@ -100,6 +100,7 @@ function LandingPage() {
               title={section.title}
               paragraph={section.paragraph}
               banners={section.banners}
+             
             />
           </div>
         ))}
