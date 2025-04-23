@@ -28,24 +28,22 @@ function Header({ className }) {
 
   const renderLinks = () => (
     <>
-      <li><Link to="/"><Icon img={HomeIcon}/>Home</Link></li>
-      <li><Link to="/Events"><Icon img={EventIcon}/>Events</Link></li>
-      {isAuthenticated ? (
-        <>
-          <li><Link to="/Profile"><Icon img={AboutIcon}/>Profile</Link></li>
-        </>
-      ) : null}
-      <li><Link to="/Teams"><Icon img={TeamsIcon}/>Team</Link></li>
-      <li><Link to="/About"><Icon img={AboutIcon}/>About</Link></li>
-      <li><Link to="/Contact"><Icon img={ContactIcon}/>Contact</Link></li>
-      {!isAuthenticated ? (
-        <li><Link to="/Login"><Icon img={ContactIcon}/>Login</Link></li>
-      ) : (
-        <li>
-          <button onClick={handleLogout} className="flex items-center">
-            <Icon img={AboutIcon}/>Logout
-          </button>
-        </li>
+     <li><Link to="/" onClick={() => setIsOpen(false)}><Icon img={HomeIcon}/>Home</Link></li>
+    <li><Link to="/Events" onClick={() => setIsOpen(false)}><Icon img={EventIcon}/>Events</Link></li>
+    {isAuthenticated && (
+      <li><Link to="/Profile" onClick={() => setIsOpen(false)}><Icon img={AboutIcon}/>Profile</Link></li>
+    )}
+    <li><Link to="/Teams" onClick={() => setIsOpen(false)}><Icon img={TeamsIcon}/>Team</Link></li>
+    <li><Link to="/About" onClick={() => setIsOpen(false)}><Icon img={AboutIcon}/>About</Link></li>
+    <li><Link to="/Contact" onClick={() => setIsOpen(false)}><Icon img={ContactIcon}/>Contact</Link></li>
+    {!isAuthenticated ? (
+      <li><Link to="/Login" onClick={() => setIsOpen(false)}><Icon img={ContactIcon}/>Login</Link></li>
+    ) : (
+      <li>
+        <button onClick={() => { handleLogout(); setIsOpen(false); }} className="flex items-center">
+          <Icon img={AboutIcon}/>Logout
+        </button>
+      </li>
       )}
     </>
   );
