@@ -93,7 +93,7 @@ function Review({ Title, para }) {
                 ))}
               </div>
 
-              {/* Scroll down button */}
+           
               <button
                 className="absolute -bottom-10 left-1/3 transform -translate-x-1/2 z-10"
                 onClick={ScrollDown}
@@ -106,7 +106,7 @@ function Review({ Title, para }) {
               </button>
             </div>
 
-            {/* Review column*/}
+           
             <div className="mt-10 ml-2 flex flex-col px-2">
               
               <UserRating
