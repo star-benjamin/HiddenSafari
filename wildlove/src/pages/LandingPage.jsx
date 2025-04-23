@@ -4,12 +4,14 @@ import Starts from '../components/LandingPage/LandingStartsIcons.jsx';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { CONSTANTS } from '../Utils/constant.js';
-import { sectionData as initialSections } from '../Data/SectionData.jsx'; // rename import for clarity
+import { sectionData as initialSections } from '../Data/SectionData.jsx'; 
+import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
   const [allEvents, setAllEvents] = useState({});
   const [sections, setSections] = useState(initialSections);
   const [error, setError] = useState(false);
+  const navigate= useNavigate();
 
   useEffect(() => {
     const keywordToSectionId = {
@@ -42,7 +44,7 @@ function LandingPage() {
           const rawBanners = fetchedData[key];
 
           if (sectionId === 6) {
-            // Special handling for videos in "Experience Yourself"
+          
             updatedSections[sectionIndex].banners = rawBanners.map((item) => ({
               videoUrl: item.videoUrl,
             }));
@@ -54,8 +56,7 @@ function LandingPage() {
                   {item.heading}
                 </h1>
               ),
-              logo: [], // Add logic for logos if needed
-              //extraText: item.about || "",
+              logo: [], 
             }));
           }
         });
@@ -74,12 +75,12 @@ function LandingPage() {
     <>
       {error && <div className="text-red-500 p-4">{error}</div>}
 
-      <div className="text-2xl mt-60 m-4 text-white pl-4">
-        <h1>Experience</h1>
+      <div className="text-5xl mt-60 m-4 text-white pl-4">
+        <h1 className='pb-1'>Experience</h1>
         <h1>Nature</h1>
       </div>
 
-      <div className="m-4 mt-20 pl-4 text-2xl">
+      <div className="m-4 mt-18 pl-4 text-2xl">
         <h1 className="text-white font-bold">India's Largest Trekking Organisation</h1>
       </div>
 
@@ -92,7 +93,7 @@ function LandingPage() {
 
       <div className="flex flex-col">
         {sections.map((section, index) => (
-          <div key={section.id} className={`${index === 5 ? 'bg-red-200' : 'bg-white'}`}>
+          <div key={section.id} onClick={() => navigate(`/event/${section.id}`)} className={`${index === 5 ? 'bg-red-200' : 'bg-white'}`}>
             <Section
               title={section.title}
               paragraph={section.paragraph}

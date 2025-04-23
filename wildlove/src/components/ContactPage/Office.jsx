@@ -11,6 +11,7 @@ function ContactOffice(){
       const fetchContacts=async()=>{
         try{
           const response=await axios.get(`${CONSTANTS.API_URL}/api/v1/contact`)
+          console.log(response.data);
           setcontact(response.data);
         } catch(err){
           console.error("Contacts couldn't be fetched:",err);

@@ -18,33 +18,46 @@ import EventsPage from "./pages/EventsPage.jsx";
 import TeamsPage from "./pages/TeamsPage.jsx";
 import TCS from "./pages/TCS.jsx";
 import Privacy from "./pages/Privacy.jsx"
+import PageNotFound from "./pages/PageNotFound.jsx";
+import EventDetailPage from "./pages/EventsDetailPage.jsx";
 
 function App() {
   const[showPara, setshowPara]=useState('False');
+  const[showParaDetailPage, setshowParaDetailPage]=useState('False');
   const location=useLocation();
 
   useEffect(()=>{
     setshowPara(location.pathname==='/')
   },[location.pathname]);
 
+  useEffect(()=>{
+    setshowParaDetailPage(location.pathname.startsWith('/event/'))
+  },[location.pathname]);
+
   const headerBgClass = location.pathname !== '/' ? " bg-orange-600" : "";
+  
   
   return (
     <>
     <AuthProvider>
       <Header  className={headerBgClass}/>
-        <div className={clsx([
-          "", 
-          showPara ? "absolute top-0 left-0 w-full h-full z-[-1]  bg-[url('src/assets/safari.jpg')] bg-contain bg-center md:bg-cover flex flex-col min-h-screen transition-all" : "relative",
-        
-          ])}
+        <div className={clsx(
+      'absolute top-0 left-0 w-full h-full -z-10 bg-cover bg-center',
+      showPara
+        ? "bg-[url('/src/assets/safari.jpg')]"
+        : showParaDetailPage
+        ? "bg-[url('/src/assets/zip.jpg')]"
+        : "bg-white"
+        )}
         >
           <Routes>
+          <Route path="*" element={<PageNotFound/>}/>
             <Route path="/"element={<LandingPage />} />
             <Route path="/Register"element={<RegisterPage/>} />
             <Route path="/About" element={<AboutPage/>}/>
             <Route path="/Privacy" element={<Privacy />}/>
             <Route path="/Events" element={<EventsPage/>}/>
+            <Route path="/event/:sectionId" element={<EventDetailPage />} />
             <Route path="/TCS" element={<TCS/>}/>
             <Route path="/Teams" element={<TeamsPage/>}/>
             <Route path="/Contact" element={<ContactPage/>}>
